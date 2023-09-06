@@ -14,7 +14,7 @@ import {FocusHistory} from './src/features/FocusHistory'
 
 
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState('');
+  const [currentSubject, setCurrentSubject] = useState('null');
   const [history, setHistory] = useState([]);
   return (
     <SafeAreaView style={styles.container}>
@@ -29,7 +29,7 @@ export default function App() {
         onTimerEnd={(subject)=>{
           setHistory([...history,subject])
         }}
-        clearSubject={()=>setCurrentSubject('')}
+        clearSubject={()=>setCurrentSubject('null')}
         />
       )}
     </SafeAreaView>
